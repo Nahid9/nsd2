@@ -7,3 +7,4 @@ lime==0.2.0.1  # Still compatible (latest version)
 matplotlib==3.8.3  # Latest version supporting Python 3.12
 scikit-image==0.22.0  # Latest version supporting Python 3.12
 python-multipart==0.0.9  # Latest version
+requests==2.31.0
