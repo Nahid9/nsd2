@@ -2,13 +2,16 @@ from fastapi import FastAPI, File, UploadFile, Request
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from fastapi.responses import HTMLResponse
-from tensorflow.keras.models import load_model
+#from tensorflow.keras.models import load_model
 from tensorflow.keras.layers import RandomFlip, RandomRotation, RandomZoom, RandomHeight, RandomWidth
 from tensorflow.keras.utils import custom_object_scope
 import numpy as np
 from PIL import Image
 import io
 import os
+import tflite_runtime.interpreter as tflite
+interpreter = tflite.Interpreter(model_path="model.tflite")
+
 
 # Initialize FastAPI
 app = FastAPI()
